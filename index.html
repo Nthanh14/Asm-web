@@ -6,54 +6,73 @@
   <title>Jewelry Store</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <h1>S.t Jewelry</h1>
-    <nav>
-   <form id="searchForm">
-    <input type="text" id="searchInput" placeholder="🔍Find products..." />
-      <a href="home.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
+<body class="products-page">
+<header>
+  <h1>S.t Jewelry</h1>
+  <nav>
+    <input type="text" id="searchInput" placeholder="🔍Look for items..." />
+    <a href="home.html">Home</a>
+    <a href="products.html">Product</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
 
-    </nav>
-  </form>
-  </header>
+   <section id="products" class="product-grid">
+      <div class="product-container" data-name="pearl ring">
+          <div class="product-card">
+            <img src="6f40307386111045c32f2fbafcfe2e06.jpg" alt="Nhẫn ngọc trai" class="product-image" />
+            <h3 class="product-name">Pearl ring</h3>
+            <p class="product-price">$60.00 - $120.00</p>
+            <button>Add to cart</button>
 
-  <section class="hero">
-    <h2>Jewelry offers stories about the love of the sea</h2>
-    <p>Shiny rings, chains, and bands come from the vast ocean</p>
+          </div>
+          <div class="product-card" data-name="pearl necklace">
+            <img src="6e3239de3c85b6ea88f73a80bbb4dc30.jpg" alt="Dây chuyền ngọc trai" class="product-image" />
+            <h3 class="product-name">Pearl necklace</h3>
+            <p class="product-price">$100.00 - $150.00</p>
+            <button>Add to cart</button>
+          </div>
+          <div class="product-card" data-name="pearl bracelet">
+            <img src="71e31a30b45b1c29cf1f87fb8427aef5.jpg" alt="Vòng tay ngọc trai" class="product-image" />
+            <h3 class="product-name">Pearl bracelet</h3>
+            <p class="product-price">$70.00 - $110.00</p>
+            <button>Add to cart</button>
+          </div>
+          <div class="product-card" data-name="pearl earrings">
+            <img src="1d74d0237b8aabfdd64e486ac4c43a35.jpg" alt="Hoa tai ngọc trai" class="product-image" />
+            <h3 class="product-name">Pearl earrings</h3>
+            <p class="product-price">$40.00 - $70.00</p>
+            <button>Add to cart</button>
+          </div>
+      </div>
   </section>
+<footer>
+  <div style="display: flex; justify-content: center; gap: 64px; flex-wrap: wrap;">
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="#">Email: stjewelry@gmail.com</a></li>
+        <li><a href="#">Phone: 012345678</a></li>
+        <li><a href="#">Address: 11 Street No. 2 Ho Chi Minh City</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
 
-  <section id="products" class="product-grid">
-    <div class="product-card">
-      <img src="6f40307386111045c32f2fbafcfe2e06.jpg" alt="Nhẫn" />
-      <h3>Pearl Ring</h3>
-      <button>See more</button>
-    </div>
-    <div class="product-card">
-      <img src="6e3239de3c85b6ea88f73a80bbb4dc30.jpg" alt="Vòng cổ" />
-      <h3>Pearl necklace</h3>
-      <button>See more</button>
-    </div>
-    <div class="product-card">
-      <img src="71e31a30b45b1c29cf1f87fb8427aef5.jpg" alt="Lắc tay" />
-      <h3>Pearl bracelet</h3>
-      <button>See more</button>
-    </div>
-    <div class="product-card">
-      <img src="1d74d0237b8aabfdd64e486ac4c43a35.jpg" alt="Bông tai" />
-      <h3>Pearl earrings</h3>
-      <button>See more</button>
-    </div>
-  </section>
-
-  <footer>
+  <div class="footer-center">
     <h3>S.t Jewelry</h3>
-    <p>Contact information: 0123456789</p>
     <p>&copy; 2025 Jewelry Store. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>
+
