@@ -66,5 +66,48 @@
   </div>
 </footer>
   <script src="script.js"></script>
+<script>
+  // cart.html - hiển thị sản phẩm trong giỏ hàng
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItemsContainer = document.getElementById("cart-items");
+  const totalDisplay = document.getElementById("total");
+
+  if (cartItemsContainer) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const row = document.createElement("tr");
+
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
+
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td>${item.quantity}</td>
+        <td>$${itemTotal.toFixed(2)}</td>
+        <td><button class="remove-btn" data-index="${index}">X</button></td>
+      `;
+
+      cartItemsContainer.appendChild(row);
+    });
+
+    totalDisplay.innerText = `Total: $${total.toFixed(2)}`;
+
+    // Xóa sản phẩm
+    document.querySelectorAll(".remove-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const index = button.getAttribute("data-index");
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload();
+      });
+    });
+  }
+});
+</script>
+
 </body>
 </html>
